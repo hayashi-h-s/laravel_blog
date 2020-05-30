@@ -11,12 +11,14 @@
   <h1>{{$article->title}}</h1>
   <p>{{$article->body}}</p>
   <br><br>
-
-  <a href="/articles/{{$article->id}}/edit" class="btn btn-info w-50 mt-3">編集</a>
-  <form action="/articles/{{$article->id}}" method="post">
-    {{ csrf_field() }}
-    <input type="hidden" name="_method" value="delete">
-    <input type="submit" name="" value="削除する" class="btn btn-danger w-50 mt-3">
-  </form>
+  @guest
+  @else
+    <a href="/articles/{{$article->id}}/edit" class="btn btn-info w-50 mt-3">編集</a>
+    <form action="/articles/{{$article->id}}" method="post">
+      {{ csrf_field() }}
+      <input type="hidden" name="_method" value="delete">
+      <input type="submit" name="" value="削除する" class="btn btn-danger w-50 mt-3">
+    </form>
+  @endguset
 </div>
 @endsection
