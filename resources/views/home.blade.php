@@ -2,17 +2,25 @@
 
 @section('content')
 <div class="text-center">
-   <h1>Laravel_Blog</h1>
+   <h1>Laravel_SNS_Blog</h1>
    <p class="mt-3">Laravelで簡易的なブログ型のSNSを作成いたしました。</p>
    <p>ユーザー登録画面より、簡単ログインできます。</p>
+</div>
+<div class="container mr-5 mt-5">
+   <h3>開発環境</h3>
+   <li>MAMP環境で作成しました。</li>
+   <li></li>
+   <li></li>
 </div>
 <div class="container mr-5 mt-5">
    <h3>機能一覧</h3>
    <li>ユーザー機能(Auth)</li>
    <li>記事投稿機能(CRUD処理)</li>
-   <li>一覧更新ラーメッセージ表示</li>
-   <li>覧ラーメッセージ表示</li>
-   <li>ラーメッセージ表示</li>
+   <li>エラーメッセージ表示</li>
    <li>フラッシュメッセージ表示</li>
+   <li>validate機能(投稿、ユーザー情報入力)</li>
+   <li></li>
+   <li></li>
+   <li></li>
 </div>
 @endsection

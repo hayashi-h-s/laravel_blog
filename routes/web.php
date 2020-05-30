@@ -12,8 +12,16 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', function () {
+    return view('home');
+});
 
-Route::get('/', 'HomeController@index')->name('home');
+Route::get('articles', function () {
+        $authUser = Auth::user(); // 認証ユーザー取得
+        $articles = Article::orderBy('id', 'desc')->get();
+    //   return $articles;
+        return view('articles.index', ['articles' => $articles]);
+});
 
 Auth::routes();
-Route::resource('articles', 'ArticlesController')->middleware('auth');
+Route::resource('articles', 'ArticlesController');
