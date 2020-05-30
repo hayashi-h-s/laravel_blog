@@ -77,10 +77,15 @@
             </div>
         </nav>
         @if($errors->has('title'))
-            <div class="alert alert-danger">{{ $errors->first('title') }}</div>
+            <div class="alert alert-danger text-center py-3 my-0">{{ $errors->first('title') }}</div>
+        @endif
+        @if (session('flash_message'))
+            <div class="flash_message bg-success text-center py-3 my-0">
+                {{ session('flash_message') }}
+            </div>
         @endif
         <main class="py-4">
-            @yield('content')
+                @yield('content')
         </main>
     </div>
 </body>

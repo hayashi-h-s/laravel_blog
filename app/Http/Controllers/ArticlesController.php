@@ -56,14 +56,14 @@ class ArticlesController extends Controller
         $rules = [
             'user_id' => 'integer|required', // 2項目以上条件がある場合は「 | 」を挟む
             'title' => 'required',
-            // 'body' => 'required',
+            'body' => 'required',
         ];
 
         $message = [
             'user_id.integer' => 'System Error',
             'user_id.required' => 'System Error',
-            'title.required'=> 'タイトルが入力されていません',
-            'message.required'=> 'メッセージが入力されていません'
+            'title.required'=> 'タイトルか内容が入力されていません。',
+            'body.required'=> 'タイトルか内容が入力されていません。'
         ];
         $validator = Validator::make($form, $rules, $message);
 
@@ -77,7 +77,7 @@ class ArticlesController extends Controller
             $article->title = $request->title;
             $article->body = $request->body;
             $article->save();
-            return redirect('/articles');
+            return redirect('/articles')->with('flash_message', '投稿が完了しました');
         }
     }
 
