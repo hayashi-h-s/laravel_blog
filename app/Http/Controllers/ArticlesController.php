@@ -20,7 +20,7 @@ class ArticlesController extends Controller
     public function index()
     {
         $authUser = Auth::user(); // 認証ユーザー取得
-        $articles = Article::all();
+        $articles = Article::orderBy('id', 'desc')->get();
     //   return $articles;
         return view('articles.index', ['articles' => $articles]);
     }
@@ -128,7 +128,7 @@ class ArticlesController extends Controller
         // 保存
         $article->save();
         // 詳細ページへリダイレクト
-        return redirect("/articles/".$id);
+        return redirect("/articles/".$id)->with('flash_message', '編集が完了しました');
     }
 
     /**
@@ -143,6 +143,6 @@ class ArticlesController extends Controller
         // 削除
         $article->delete();
         // 一覧にリダイレクト
-        return redirect('/articles');
+        return redirect('/articles')->with('flash_message', '削除が完了しました');
     }
 }

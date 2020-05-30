@@ -12,8 +12,10 @@
   @foreach ($articles as $article)
     <div class="card mx-auto text-center container">
       <div class="card-body">
+        <p>{{$article->created_at }}</p>
         <h4><a href="/articles/{{$article->id}}">{{$article->title}}</a></h4>
         <p>{{$article->body}}</p>
+
         <a href="/articles/{{$article->id}}/edit" class="btn btn-info mb-2">編集</a>
         <form action="/articles/{{$article->id}}" method="post">
           {{ csrf_field() }}
