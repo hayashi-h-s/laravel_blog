@@ -65,6 +65,16 @@
                             </div>
                         </div>
                     </form>
+                    <form method="POST" action="{{ route('login') }}">
+<!-- <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+ <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password"> -->
+
+                        <input type="hidden" name="email" value="laravel_blog@gmail.com" id="email" required autocomplete="email">
+                        <input type="hidden" name="password" value="laravel_blog" id="password" name="password" required autocomplete="current-password">
+                        <button type="submit" class="btn btn-primary" >
+                        {{ __('テストユーザーでログイン') }}
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>
