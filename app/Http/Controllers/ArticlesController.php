@@ -15,6 +15,7 @@ class ArticlesController extends Controller
      */
     public function index()
     {
+        $authUser = Auth::user(); // 認証ユーザー取得
         $articles = Article::all();
     //   return $articles;
         return view('articles.index', ['articles' => $articles]);
@@ -27,7 +28,13 @@ class ArticlesController extends Controller
      */
     public function create()
     {
-        return view('articles.create');
+        $authUser = Auth::user(); // 認証ユーザー取得
+
+        $params = [
+            'authUser' => $authUser,
+        ];
+
+        return view('articles.create', $params);
     }
 
     /**
@@ -39,6 +46,8 @@ class ArticlesController extends Controller
     public function store(Request $request)
     {
         // モデルからインスタンスを生成
+        $authUser = Auth::user(); // 認証ユーザー取得
+
         $article = new Article;
         // $requestにformからのデータが格納されているので、以下のようにそれぞれ代入する。
         $article->title = $request->title;
@@ -46,7 +55,7 @@ class ArticlesController extends Controller
         $article->user_id = $request->user_id;
         // 保存
         $article->save();
-        Auth::user()->articles()->create($request->validated());
+        // Auth::user()->articles()->create($request->validated());
         // 保存後 一覧ページへリダイレクト
         return redirect('/articles')
         ;
