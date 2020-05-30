@@ -3,8 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+
 use App\Article;
+
 use Illuminate\Support\Facades\Auth;
+
+use Validator;
 
 class ArticlesController extends Controller
 {
@@ -33,7 +37,6 @@ class ArticlesController extends Controller
         $params = [
             'authUser' => $authUser,
         ];
-
         return view('articles.create', $params);
     }
 
@@ -47,18 +50,35 @@ class ArticlesController extends Controller
     {
         // モデルからインスタンスを生成
         $authUser = Auth::user(); // 認証ユーザー取得
-
+        $form = $request->all();
         $article = new Article;
-        // $requestにformからのデータが格納されているので、以下のようにそれぞれ代入する。
-        $article->title = $request->title;
-        $article->body = $request->body;
-        $article->user_id = $request->user_id;
-        // 保存
-        $article->save();
-        // Auth::user()->articles()->create($request->validated());
-        // 保存後 一覧ページへリダイレクト
-        return redirect('/articles')
-        ;
+
+        $rules = [
+            'user_id' => 'integer|required', // 2項目以上条件がある場合は「 | 」を挟む
+            'title' => 'required',
+            // 'body' => 'required',
+        ];
+
+        $message = [
+            'user_id.integer' => 'System Error',
+            'user_id.required' => 'System Error',
+            'title.required'=> 'タイトルが入力されていません',
+            'message.required'=> 'メッセージが入力されていません'
+        ];
+        $validator = Validator::make($form, $rules, $message);
+
+        if($validator->fails()){
+            return redirect('/articles/create')
+                ->withErrors($validator)
+                ->withInput();
+        }else{
+            unset($form['_token']);
+            $article->user_id = $request->user_id;
+            $article->title = $request->title;
+            $article->body = $request->body;
+            $article->save();
+            return redirect('/articles');
+        }
     }
 
     /**

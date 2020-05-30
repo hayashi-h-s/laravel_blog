@@ -8,6 +8,8 @@
  */
 
 
+/* 共通のcss */
+
 a{
   color:black!important;
   /* display:inline-block; */
@@ -16,8 +18,6 @@ a{
 a:hover {
   /* text-decoration: none!important; */
 }
-
-
 
 
 :root {
