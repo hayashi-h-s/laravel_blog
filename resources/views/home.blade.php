@@ -1,21 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">topopage</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="text-center">
+   <h1>Laravel_Blog</h1>
+   <p>Laravelで簡易的なブログサービスを作成いたしました。</p>
+   <p>ユーザー登録画面より、簡単ログインできます。</p>
 </div>
 @endsection

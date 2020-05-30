@@ -53,7 +53,7 @@
                                 <a class="nav-link" href="/articles/create">新規投稿</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/articles">新規一覧</a>
+                                <a class="nav-link" href="/articles">投稿一覧</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Article;
+use Illuminate\Support\Facades\Auth;
 
 class ArticlesController extends Controller
 {
@@ -39,9 +40,10 @@ class ArticlesController extends Controller
     {
         // モデルからインスタンスを生成
         $article = new Article;
-        // $requestにformからのデータが格納されているので、以下のようにそれぞれ代入する
+        // $requestにformからのデータが格納されているので、以下のようにそれぞれ代入する。
         $article->title = $request->title;
         $article->body = $request->body;
+        $article->user_id = $request->user_id;
         // 保存
         $article->save();
         Auth::user()->articles()->create($request->validated());
@@ -89,6 +91,7 @@ class ArticlesController extends Controller
         // editで編集されたデータを$articleにそれぞれ代入する
         $article->title = $request->title;
         $article->body = $request->body;
+        $article->user_id = $request->user_id;
         // 保存
         $article->save();
         // 詳細ページへリダイレクト
