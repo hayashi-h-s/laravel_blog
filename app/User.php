@@ -19,11 +19,18 @@ class User extends Authenticatable
         'name', 'email', 'password',
     ];
 
+    public function articles()
+    {
+        return $this->hasMany('App\Article');
+    }
+
     /**
      * The attributes that should be hidden for arrays.
      *
      * @var array
      */
+
+
     protected $hidden = [
         'password', 'remember_token',
     ];
