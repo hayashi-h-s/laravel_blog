@@ -102,8 +102,12 @@ class ArticlesController extends Controller
      */
     public function edit($id)
     {
+        $authUser = Auth::user(); // 認証ユーザー取得
+        $params = [
+            'authUser' => $authUser,
+        ];
         $article = Article::find($id);
-        return view('articles.edit', ['article' => $article]);
+        return view('articles.edit', ['article' => $article],$params);
     }
 
     /**

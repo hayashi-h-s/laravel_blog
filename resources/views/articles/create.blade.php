@@ -23,10 +23,8 @@
     </div>
 
     <div>
-      <input type="submit" value="投稿" class="btn btn-primary w-75 mt-3" >
+      <input type="submit" value="投稿" class="btn btn-primary w-75 mt-3">
     </div>
   </form>
 </div>
-
-
 @endsection
