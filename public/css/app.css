@@ -7,6 +7,19 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
+
+a{
+  color:black!important;
+  /* display:inline-block; */
+}
+
+a:hover {
+  /* text-decoration: none!important; */
+}
+
+
+
+
 :root {
   --blue: #3490dc;
   --indigo: #6574cd;
@@ -10927,4 +10940,3 @@ a.text-dark:focus {
     border-color: #dee2e6;
   }
 }
-
