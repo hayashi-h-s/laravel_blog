@@ -44,8 +44,10 @@ class ArticlesController extends Controller
         $article->body = $request->body;
         // 保存
         $article->save();
+        Auth::user()->articles()->create($request->validated());
         // 保存後 一覧ページへリダイレクト
-        return redirect('/articles');
+        return redirect('/articles')
+        ;
     }
 
     /**

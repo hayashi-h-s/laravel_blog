@@ -18,7 +18,7 @@
       <textarea name="body" rows="8" cols="80" placeholder="記事の内容を入れる"></textarea>
     </div>
     <div>
-      <input type="submit" value="送信">
+      <input type="submit" value="送信" class="btn btn-primary">
     </div>
   </form>
 @endsection

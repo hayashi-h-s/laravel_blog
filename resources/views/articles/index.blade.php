@@ -17,7 +17,7 @@
     <form action="/articles/{{$article->id}}" method="post">
       {{ csrf_field() }}
       <input type="hidden" name="_method" value="delete">
-      <input type="submit" name="" value="削除">
+      <input type="submit" name="" value="削除" class="btn btn-primary">
     </form>
     <hr>
   @endforeach
