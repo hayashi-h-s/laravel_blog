@@ -17,11 +17,13 @@ Route::get('/', function () {
 });
 
 Route::get('articles', function () {
-        $authUser = Auth::user(); // 認証ユーザー取得
-        $articles = Article::orderBy('id', 'desc')->get();
+        // $authUser = Auth::user(); // 認証ユーザー取得
+        // $articles = Article::orderBy('id', 'desc')->get();
     //   return $articles;
         return view('articles.index', ['articles' => $articles]);
 });
+
+Route::get('/', 'HomeController@index')->name('home');
 
 Auth::routes();
 Route::resource('articles', 'ArticlesController');

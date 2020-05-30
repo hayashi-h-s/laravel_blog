@@ -13,15 +13,15 @@
     <div class="card mx-auto text-center container">
       <div class="card-body">
         <p>{{$article->created_at }}</p>
-        <h4><a href="/articles/{{$article->id}}">{{$article->title}}</a></h4>
-        <p>{{$article->body}}</p>
+        <h3><a href="/articles/{{$article->id}}">{{$article->title}}</a></h3>
+        <h5>{{$article->body}}</h5>
         @guest
         @else
-          <a href="/articles/{{$article->id}}/edit" class="btn btn-info mb-2">編集</a>
+          <a href="/articles/{{$article->id}}/edit" class="btn btn-info mb-2 mt-4 w-25">編集</a>
           <form action="/articles/{{$article->id}}" method="post">
             {{ csrf_field() }}
             <input type="hidden" name="_method" value="delete">
-            <input type="submit" name="" value="削除" class="btn btn-primary">
+            <input type="submit" name="" value="削除" class="btn btn-primary w-25">
           </form>
         @endguest
       </div>

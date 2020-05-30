@@ -123,12 +123,36 @@ class ArticlesController extends Controller
         $article = Article::find($id);
         // editで編集されたデータを$articleにそれぞれ代入する
         $article->title = $request->title;
+        $form = $request->all();
         $article->body = $request->body;
         $article->user_id = $request->user_id;
-        // 保存
-        $article->save();
-        // 詳細ページへリダイレクト
-        return redirect("/articles/".$id)->with('flash_message', '編集が完了しました');
+
+        $rules = [
+            'user_id' => 'integer|required', // 2項目以上条件がある場合は「 | 」を挟む
+            'title' => 'required',
+            'body' => 'required',
+        ];
+
+        $message = [
+            'user_id.integer' => 'System Error',
+            'user_id.required' => 'System Error',
+            'title.required'=> 'タイトルか内容が入力されていません。',
+            'body.required'=> 'タイトルか内容が入力されていません。'
+        ];
+        $validator = Validator::make($form, $rules, $message);
+
+        if($validator->fails()){
+            return redirect('/articles/edit')
+                ->withErrors($validator)
+                ->withInput();
+        }else{
+            unset($form['_token']);
+            $article->user_id = $request->user_id;
+            $article->title = $request->title;
+            $article->body = $request->body;
+            $article->save();
+            return redirect("/articles/".$id)->with('flash_message', '編集が完了しました');
+        }
     }
 
     /**

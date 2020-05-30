@@ -3,8 +3,9 @@
 @section('content')
 <div class="text-center">
    <h1>Laravel_SNS_Blog</h1>
-   <p class="mt-3">Laravelで簡易的なブログ型のSNSを作成いたしました。</p>
+   <p class="mt-3">ポートフォリオとしてLaravelでブログ型のSNSを作成いたしました。</p>
    <p>ユーザー登録画面より、簡単ログインできます。</p>
+   <p>ログイン時のみ、記事の投稿が可能です。</p>
 </div>
 <div class="container mr-5 mt-5">
    <h3>開発環境</h3>
@@ -19,7 +20,7 @@
    <li>エラーメッセージ表示</li>
    <li>フラッシュメッセージ表示</li>
    <li>validate機能(投稿、ユーザー情報入力)</li>
-   <li></li>
+   <li>日本時間表示に変更</li>
    <li></li>
    <li></li>
 </div>
