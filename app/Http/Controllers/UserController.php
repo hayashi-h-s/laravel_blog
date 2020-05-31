@@ -62,13 +62,16 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    // public function edit($id)
-    // {
-    // $user = Auth::user();
-    // eval(\Psy\sh());
-    // return view('user.edit',[ 'user' => $user ]);
-    // }
 
+    public function edit($id)
+    {
+        $user = Auth::user();
+        // eval(\Psy\sh());
+        // $params = [
+        //     'User' => $user,
+        // ];
+        return view('users.edit',[ 'user' => $user ]);
+    }
 
     /**
      * Update the specified resource in storage.
@@ -79,7 +82,14 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user = User::find($id);
+        // リクエストデータ受取
+        $form = $request->all();
+        // フォームトークン削除
+        unset($form['_token']);
+        // レコードアップデート
+        $user->fill($form)->save();
+        return redirect('/users');
     }
 
     /**

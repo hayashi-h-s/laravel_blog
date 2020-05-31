@@ -6,9 +6,21 @@ use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
+    // use AuthenticatesUsers;
+    use AuthenticatesUsers {
+        logout as performLogout;
+    }
+
+    public function logout(Request $request)
+    {
+        $this->performLogout($request);
+        return redirect('/')->with('flash_message', 'ログインしました');
+    }
+
     /**
      * 認証を処理する
      *
@@ -21,7 +33,7 @@ class LoginController extends Controller
 
         if (Auth::attempt(['email' => $email, 'password' => $password])) {
             // 認証に成功した
-            return redirect('/articles');
+            return redirect('/articles')->with('flash_message', 'ログインしました');
         }
     }
     /*
@@ -35,14 +47,22 @@ class LoginController extends Controller
     |
     */
 
-    use AuthenticatesUsers;
-
     /**
      * Where to redirect users after login.
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+
+    // protected $redirectTo = '/articles';
+
+    protected function redirectTo() {
+        // $authUser = Auth::user(); // 認証ユーザー取得
+        session()->flash('flash_message', 'ログインしました');
+        // return redirect('/articles')->with('flash_message', 'ログインしました');
+        // return redirect()->route('articles.index');
+        return '/articles';
+    }
+
 
     /**
      * Create a new controller instance.

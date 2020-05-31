@@ -8,7 +8,7 @@
                 <div class="card-header">{{ __('ログイン') }}</div>
                 <div class="card-body">
                     <div class="text-center mb-3 w-100">
-                        <a href="/guest" class="btn btn-info w-50">簡単ログイン</a>
+                        <a href="/guest" class="btn btn-info w-50">テストユーザーでログイン</a>
                     </div>
                     <hr>
                     <form method="POST" action="{{ route('login') }}">

@@ -29,7 +29,11 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/articles';
+    // protected $redirectTo = '/articles';
+    protected function redirectTo() {
+        session()->flash('flash_message', 'ユーザー登録完了。');
+        return '/articles';
+    }
     /**
      * Create a new controller instance.
      *

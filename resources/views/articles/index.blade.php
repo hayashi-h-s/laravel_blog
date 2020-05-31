@@ -16,7 +16,7 @@
         <h3>ユーザー名：<a href="{{ url('users/'.$article->user->id) }}">{{ $article->user->name }}</a></h4>
         <h4><a href="/articles/{{$article->id}}">タイトル：{{$article->title}}</a></h3>
 
-        <h5>内容：{{$article->body}}</h5>
+        <h5 >{{$article->body}}</h5>
         @guest
         @else
           <a href="/articles/{{$article->id}}/edit" class="btn btn-info mb-2 mt-4 w-25">編集</a>
