@@ -7,9 +7,9 @@
 {{-- application.blade.phpの@yield('content')に以下のレイアウトを代入 --}}
 @section('content')
 <div class="jumbotron container text-center ">
-  <h1 class="display-5">記事詳細</h1>
-  <h1 class="display-4">{{$article->title}}</h1>
-  <h2>{{$article->body}}</h2>
+  <h1 class="display-4">記事詳細</h1>
+  <h1 class="display-5">{{$article->title}}</h1>
+  <h3>{{$article->body}}</h3>
   <br><br>
   @guest
   @else

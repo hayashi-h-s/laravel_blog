@@ -16,7 +16,6 @@
                 {{ __('Delete') }}
             </a>
         </div>
-
         {{-- ユーザー1件の情報 --}}
         <dl class="row">
             <dt class="col-md-2">{{ __('ID') }}</dt>
@@ -26,6 +25,9 @@
             <dt class="col-md-2">{{ __('E-Mail Address') }}</dt>
             <dd class="col-md-10">{{ $user->email }}</dd>
         </dl>
+    </div>
+    <div class="text-center">
+        <h1 class="display-5">{{ $user->name }}の投稿記事一覧</h1>
     </div>
     @foreach ($user->articles as $article)
     <div class="card mx-auto text-center container">
