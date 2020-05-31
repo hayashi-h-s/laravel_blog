@@ -89,7 +89,7 @@ class ArticlesController extends Controller
      */
     public function show($id)
     {
-        $article = Article::find($id);
+        $article= Article::find($id);
         // viewにデータを渡す
         return view('articles.show', ['article' => $article]);
     }
