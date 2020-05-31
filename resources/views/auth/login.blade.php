@@ -6,12 +6,16 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('ログイン') }}</div>
-
                 <div class="card-body">
+                    <div class="text-center mb-3 w-100">
+                        <a href="/guest" class="btn btn-info">簡単ログイン</a>
+                    </div>
+                    <hr>
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
                         <div class="form-group row">
+
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('メールアドレス') }}</label>
 
                             <div class="col-md-6">
@@ -64,16 +68,6 @@
                                 @endif
                             </div>
                         </div>
-                    </form>
-                    <form method="POST" action="{{ route('login') }}">
-<!-- <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
- <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password"> -->
-
-                        <input type="hidden" name="email" value="laravel_blog@gmail.com" id="email" required autocomplete="email">
-                        <input type="hidden" name="password" value="laravel_blog" id="password" name="password" required autocomplete="current-password">
-                        <button type="submit" class="btn btn-primary" >
-                        {{ __('テストユーザーでログイン') }}
-                        </button>
                     </form>
                 </div>
             </div>

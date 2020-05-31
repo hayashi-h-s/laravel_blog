@@ -5,9 +5,25 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
+    /**
+     * 認証を処理する
+     *
+     * @return Response
+     */
+    public function authenticate()
+    {
+        $email = 'laraveblog@guest.com';
+        $password = 'laraveblog';
+
+        if (Auth::attempt(['email' => $email, 'password' => $password])) {
+            // 認証に成功した
+            return redirect('/articles');
+        }
+    }
     /*
     |--------------------------------------------------------------------------
     | Login Controller
