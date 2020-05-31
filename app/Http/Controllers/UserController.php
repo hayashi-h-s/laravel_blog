@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Article;
 use App\User;
 
+use Illuminate\Support\Facades\Auth;
+
 class UserController extends Controller
 {
     /**
@@ -46,9 +48,12 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(User $user)
     {
-        //
+        $authUser = Auth::user(); // 認証ユーザー取得
+        $user = User::find($user->id);
+        // $articles = $user->articles()::all();
+        return view('users.show', ['user' => $user]);
     }
 
     /**

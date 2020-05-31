@@ -16,8 +16,9 @@
 <div class="container mr-5 mt-5">
    <h3>機能一覧</h3>
    <li>ユーザー機能(Auth)</li>
+   <li>ユーザーのCRUD機能</li>
    <li>ゲストログイン機能</li>
-   <li>記事投稿機能(CRUD処理)</li>
+   <li>記事投稿機能(CRUD)</li>
    <li>エラーメッセージ表示</li>
    <li>フラッシュメッセージ表示</li>
    <li>validate機能(投稿、ユーザー情報入力)</li>
@@ -29,6 +30,12 @@
    <h3>フロントエンド</h3>
    <li>CSS</li>
    <li>Bootstrap</li>
+   <li></li>
+</div>
+<div class="container mr-5 mt-5">
+   <h3>使用技術</h3>
+   <li>デバックツール</li>
+   <li></li>
    <li></li>
 </div>
 @endsection
