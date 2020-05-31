@@ -26,3 +26,4 @@ Auth::routes();
 Route::get('guest', 'Auth\LoginController@authenticate')->name('login.guest');
 
 Route::resource('articles', 'ArticlesController');
+Route::resource('users', 'UserController');
