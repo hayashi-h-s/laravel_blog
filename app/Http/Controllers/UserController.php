@@ -52,7 +52,7 @@ class UserController extends Controller
     {
         $authUser = Auth::user(); // 認証ユーザー取得
         $user = User::find($user->id);
-        // $articles = $user->articles()::all();
+        // $articles = $user->articles()::all();s
         return view('users.show', ['user' => $user]);
     }
 
@@ -62,10 +62,13 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
-    {
-        //
-    }
+    // public function edit($id)
+    // {
+    // $user = Auth::user();
+    // eval(\Psy\sh());
+    // return view('user.edit',[ 'user' => $user ]);
+    // }
+
 
     /**
      * Update the specified resource in storage.
