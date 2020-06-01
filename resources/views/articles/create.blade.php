@@ -6,9 +6,10 @@
 
 {{-- application.blade.phpの@yield('content')に以下のレイアウトを代入 --}}
 @section('content')
-
-<div class="jumbotron container text-center">
+<div class="text-center">
   <h1 class="display-4">記事投稿</h1>
+</div>
+<div class="jumbotron container text-center">
   <form action="/articles" method="post">
     {{-- 以下を入れないとエラーになる --}}
     {{ csrf_field() }}
