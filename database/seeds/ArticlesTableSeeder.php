@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
- use Carbon\Carbon;
+use Carbon\Carbon;
 class ArticlesTableSeeder extends Seeder
 {
     /**
@@ -22,7 +22,6 @@ class ArticlesTableSeeder extends Seeder
             "created_at" => new DateTime(),
             "updated_at" => new DateTime()
             ],
-
 
             [
             'title' => 'タイトル2',
@@ -103,7 +102,7 @@ class ArticlesTableSeeder extends Seeder
             'body' => '速水 信二 ２６歳です。
 
                     プログラミングの学習歴は約１年です。
-                       MENTAというサービスを利用して、東京の会社のCTOの方にご指導いただだいていました。
+                       MENTAというサービスを利用して、東京の会社のCTOにご指導いただだいていました。
 
                        掛川工業高等学校出身です。
                        学生時代は、小学校から中学校まで野球部に所属しており、高校時代はソフトボール部に所属しておりました。
