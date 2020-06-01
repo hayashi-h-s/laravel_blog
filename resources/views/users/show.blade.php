@@ -9,7 +9,7 @@
     <div class="text-center">
         <h1 class="display-5">投稿記事一覧</h1>
     </div>
-    @foreach ($user->articles as $article)
+    @foreach ($user->articles as $article )
     <div class="card mx-auto text-center container">
         <div class="card-body">
         <p>{{$article->created_at }}</p>
@@ -22,7 +22,6 @@
             @if( ( $article->user_id ) === ( Auth::user()->id ) )
                 <a href="/articles/{{$article->id}}/edit" class="btn btn-info mb-2 mt-4 w-25">編集</a>
                 <form action="/articles/{{$article->id}}" method="post">
-                {{ csrf_field() }}
                 <input type="hidden" name="_method" value="delete">
                 <input type="submit" name="" value="削除" class="btn btn-primary w-25">
                 </form>
@@ -31,5 +30,4 @@
         </div>
     </div>
     @endforeach
-
 @endsection
