@@ -25,7 +25,7 @@
       @endguest
     </div>
   </div>
-  <div class="article-content mx-auto">
+  <div class="article_content mx-auto">
     <p class="mt-4">{!! nl2br(e($article->body)) !!}</p>
   </div>
 </div>

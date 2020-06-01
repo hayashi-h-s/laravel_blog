@@ -4,7 +4,7 @@
 @extends('layouts.app')
 @section('content')
     <div class="text-center mb-5">
-        <h1 class="red">{{ $user->name }}</h1>
+        <h1>{{ $user->name }}</h1>
     </div>
     <div class="text-center">
         <h1 class="display-5">投稿記事一覧</h1>

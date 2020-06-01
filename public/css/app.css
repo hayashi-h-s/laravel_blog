@@ -6,9 +6,25 @@
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+/*
 
+.red{
+  color:red;
+} */
 
+/* タブレット向けレイアウト */
+@media all and (max-width: 1200px) {
+  .article_content {
+    width: 70%!important;
+  }
+}
 
+/*  スマホ向けレイアウト */
+@media all and (max-width: 670px) {
+  .article_content {
+    width: 90%!important;
+  }
+}
 
 /* 共通のcss */
 .all-content{
@@ -28,7 +44,7 @@ a:hover {
 
 /* articles/show */
 
-.article-content{
+.article_content{
   width:50%;
   font-size :20px;
 }

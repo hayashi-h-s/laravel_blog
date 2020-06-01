@@ -23,6 +23,7 @@ http://laravel-blog-portfolio.herokuapp.com/login
 * validate機能(投稿、ユーザー情報入力)
 * 日本時間表示に変更
 * ページネーション機能の実装
+* 記事内容を個別でレスポンシブ対応(スマホ、タブレット)
 * デバッグ技術
   -  logger()ヘルパー
   -  val(\Psy\sh());
