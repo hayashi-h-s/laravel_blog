@@ -33,7 +33,7 @@ class LoginController extends Controller
 
         if (Auth::attempt(['email' => $email, 'password' => $password])) {
             // 認証に成功した
-            return redirect('/articles')->with('flash_message', 'ログインしました');
+            return redirect('/articles')->with('flash_message', 'ログインしました。');
         }
     }
     /*

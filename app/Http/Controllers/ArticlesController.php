@@ -19,9 +19,9 @@ class ArticlesController extends Controller
      */
     public function index()
     {
-        $authUser = Auth::user(); // 認証ユーザー取得
-        $articles = Article::orderBy('id', 'desc')->get();
-    //   return $articles;
+        $auth = Auth::user(); // 認証ユーザー取得
+        $articles = Article::orderBy('id', 'desc')->paginate(5);
+        // $articles = Article::paginate(5);
         return view('articles.index', ['articles' => $articles]);
     }
 
@@ -167,6 +167,6 @@ class ArticlesController extends Controller
         // 削除
         $article->delete();
         // 一覧にリダイレクト
-        return redirect('/articles')->with('flash_message', '削除が完了しました');
+        return redirect("/users/".$article->user->id )->with('flash_message', '削除が完了しました');
     }
 }

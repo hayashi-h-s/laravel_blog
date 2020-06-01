@@ -3,6 +3,11 @@
 @endphp
 @extends('layouts.app')
 @section('content')
+
+@if ($auth)
+  // trueだった場合の表示
+@endif
+
 <div class="container">
     <h1>{{ $title }}</h1>
     <div class="table-responsive">

@@ -24,8 +24,14 @@ Githubのリンクをのせる。
    <li>フラッシュメッセージ表示</li>
    <li>validate機能(投稿、ユーザー情報入力)</li>
    <li>日本時間表示に変更</li>
+   <li>ページネーション機能の実装</li>
    <li></li>
    <li></li>
+   <li></li>
+   <li></li>
+</div>
+</div>
+</div>
 </div>
 <div class="container mr-5 mt-5">
    <h3>フロントエンド</h3>

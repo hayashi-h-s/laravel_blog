@@ -19,14 +19,17 @@
         <h5>内容：{{$article->body}}</h5>
         @guest
         @else
-            <a href="/articles/{{$article->id}}/edit" class="btn btn-info mb-2 mt-4 w-25">編集</a>
-            <form action="/articles/{{$article->id}}" method="post">
-            {{ csrf_field() }}
-            <input type="hidden" name="_method" value="delete">
-            <input type="submit" name="" value="削除" class="btn btn-primary w-25">
-            </form>
+            @if( ( $article->user_id ) === ( Auth::user()->id ) )
+                <a href="/articles/{{$article->id}}/edit" class="btn btn-info mb-2 mt-4 w-25">編集</a>
+                <form action="/articles/{{$article->id}}" method="post">
+                {{ csrf_field() }}
+                <input type="hidden" name="_method" value="delete">
+                <input type="submit" name="" value="削除" class="btn btn-primary w-25">
+                </form>
+            @endif
         @endguest
         </div>
     </div>
     @endforeach
+
 @endsection

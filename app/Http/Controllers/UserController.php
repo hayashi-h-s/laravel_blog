@@ -52,7 +52,6 @@ class UserController extends Controller
     {
         $authUser = Auth::user(); // 認証ユーザー取得
         $user = User::find($user->id);
-        // $articles = $user->articles()::all();s
         return view('users.show', ['user' => $user]);
     }
 
