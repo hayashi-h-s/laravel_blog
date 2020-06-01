@@ -21,6 +21,15 @@ a:hover {
 }
 
 
+/* articles/show */
+
+.article-content{
+  width:40%;
+  font-family: serif;
+  font-size :20px;
+}
+
+
 :root {
   --blue: #3490dc;
   --indigo: #6574cd;

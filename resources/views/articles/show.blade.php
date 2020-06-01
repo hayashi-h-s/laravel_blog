@@ -12,8 +12,7 @@
 </div>
 <div class="card mx-auto text-center container">
   <div class="card-body">
-    <h1 class="display-5 mb-5">タイトル：{{$article->title}}</h1>
-    <h4>{{$article->body}}</h3>
+    <h1 class="display-5">タイトル：{{$article->title}}</h1>
     <br><br>
     @guest
     @else
@@ -25,5 +24,8 @@
       </form>
     @endguest
   </div>
+</div>
+<div class="article-content mx-auto">
+  <p class="mt-4">{!! nl2br(e($article->body)) !!}</p>
 </div>
 @endsection
