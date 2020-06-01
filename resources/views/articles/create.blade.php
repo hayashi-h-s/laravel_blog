@@ -19,7 +19,7 @@
     </div>
     <div class="mt-3">
       <div><label for="body">内容</label></div>
-      <textarea name="body" rows="8" cols="80" placeholder="記事の内容を入れる" class="w-75"></textarea>
+      <textarea name="body" rows="8" cols="80" placeholder="記事の内容を入れる" class="w-75 article_create"></textarea>
     </div>
 
     <div>

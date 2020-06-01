@@ -89,7 +89,7 @@
                 {{ session('flash_message') }}
             </div>
         @endif
-        <main class="py-4">
+        <main class="py-4 all-content">
                 @yield('content')
         </main>
     </div>

@@ -13,10 +13,9 @@
     <div class="card mx-auto text-center container">
         <div class="card-body">
         <p>{{$article->created_at }}</p>
-        <h3>ユーザー名：<a href="{{ url('users/'.$article->user->id) }}">{{ $article->user->name }}</a></h4>
+        <h3><a href="{{ url('users/'.$article->user->id) }}">ユーザー名：{{ $article->user->name }}</a></h4>
         <h4><a href="/articles/{{$article->id}}">タイトル：{{$article->title}}</a></h3>
-
-        <h5>内容：{{$article->body}}</h5>
+        <h5 class="mt-3"><a href="/articles/{{$article->id}}">[記事の詳細を表示]</a></h3>
         @guest
         @else
             @if( ( $article->user_id ) === ( Auth::user()->id ) )

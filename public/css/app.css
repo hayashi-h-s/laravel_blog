@@ -9,6 +9,9 @@
 
 
 /* 共通のcss */
+.all-content{
+  font-family: serif;
+}
 
 a{
   color:black!important;
@@ -25,8 +28,11 @@ a:hover {
 
 .article-content{
   width:50%;
-  font-family: serif;
   font-size :20px;
+}
+
+.article_create{
+  height:500px;
 }
 
 
