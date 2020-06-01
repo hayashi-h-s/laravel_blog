@@ -18,7 +18,7 @@ class LoginController extends Controller
     public function logout(Request $request)
     {
         $this->performLogout($request);
-        return redirect('/')->with('flash_message', 'ログインしました');
+        return redirect('/')->with('flash_message', 'ログアウトしました。');
     }
 
     /**
@@ -63,7 +63,6 @@ class LoginController extends Controller
         return '/articles';
     }
 
-
     /**
      * Create a new controller instance.
      *
@@ -72,5 +71,6 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+        return '/articles';
     }
 }

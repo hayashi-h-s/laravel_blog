@@ -12,6 +12,10 @@ Herokuにデプロイしています。
 速水信二のパスワード :  laraveblog  
 http://laravel-blog-portfolio.herokuapp.com/login  
 
+*  ログアウト時でも使える機能
+  -  投稿一覧
+  -  投稿詳細
+
 # 実装機能一覧
 
 * ユーザー登録機能
@@ -23,7 +27,8 @@ http://laravel-blog-portfolio.herokuapp.com/login
 * validate機能(投稿、ユーザー情報入力)
 * 日本時間表示に変更
 * ページネーション機能の実装
-* 記事内容を個別でレスポンシブ対応(スマホ、タブレット)
+* 記事内容のwidthをレスポンシブ対応(スマホ、タブレット)
+* MIDDLEWAREによる制限
 * デバッグ技術
   -  logger()ヘルパー
   -  val(\Psy\sh());
