@@ -1,0 +1,14 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
+
+@media all and (max-width: 1200px) {
+  .red{
+    color:red;
+  }
+}
+
+// スマホ向けレイアウト
+@media all and (max-width: 670px) {
+  .red{
+    color:red;
+  }
+}
