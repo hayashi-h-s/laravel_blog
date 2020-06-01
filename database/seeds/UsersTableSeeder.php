@@ -21,18 +21,21 @@ database/seeds/UsersTableSeeder.php
 
         //特定のデータを追加
         User::create([
+            'id'=> '1',
             'name' => '速水 信二',
             'email' => 'laraveblog@guest.com',
             'password' => Hash::make('laraveblog')
         ]);
 
         User::create([
+            'id'=> '2',
             'name' => 'テストユーザー１',
             'email' => 'laraveblog1@guest.com',
-        'password' => Hash::make('laraveblog1')
+            'password' => Hash::make('laraveblog1')
         ]);
 
         User::create([
+            'id'=> '3',
             'name' => 'テストユーザー2',
             'email' => 'laraveblog2@guest.com',
         'password' => Hash::make('laraveblog2')

@@ -1,16 +1,16 @@
 
 # Laravel_blog
 
-PHP/Laravelで作成した、SNS型のブログサービスです。
-PHP/Laravelの学習を作成いたしました。
+PHP/Laravelで作成した、SNS型のブログサービスです。  
+PHP/Laravelの学習を作成いたしました。  
 ログインしなくても、投稿一覧は観覧可能です。
 
 # 本番環境
  
 Herokuにデプロイしています。  
 ログインページより、テストユーザー(速水 信二)でワンクリックログインできます。  
-速水信二のパスワード :  laraveblog
-http://laravel-blog-portfolio.herokuapp.com/login
+速水信二のパスワード :  laraveblog  
+http://laravel-blog-portfolio.herokuapp.com/login  
 
 # 実装機能一覧
 
@@ -32,16 +32,12 @@ http://laravel-blog-portfolio.herokuapp.com/login
 * フロントエンド
   - CSS
   - Bootstrap
-
 * バックエンド
   - PHP 7.4
   - Laravel 7.13.0
-
 * サーバー
   - Apache 2.4.41
-
 * DB
   - MySQL 5.7
-
 * インフラ
   - Heroku
