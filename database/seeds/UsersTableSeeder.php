@@ -21,7 +21,7 @@ database/seeds/UsersTableSeeder.php
 
         //特定のデータを追加
         User::create([
-            'id'=> '1',
+            'id'=> '100',
             'name' => '速水 信二',
             'email' => 'laraveblog@guest.com',
             'password' => Hash::make('laraveblog')

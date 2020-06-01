@@ -6,10 +6,13 @@
 
 {{-- application.blade.phpの@yield('content')に以下のレイアウトを代入 --}}
 @section('content')
+
+<div class="text-center">
+  <h1 class="display-4 mb-3">記事詳細</h1>
+</div>
 <div class="card mx-auto text-center container">
   <div class="card-body">
-    <h1 class="display-4">記事詳細</h1>
-    <h1 class="display-5">{{$article->title}}</h1>
+    <h1 class="display-5 mb-5">タイトル：{{$article->title}}</h1>
     <h4>{{$article->body}}</h3>
     <br><br>
     @guest
