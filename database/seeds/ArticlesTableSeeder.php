@@ -16,16 +16,16 @@ class ArticlesTableSeeder extends Seeder
 
             [
             // テストユーザー1のデータ
-            'title' => 'タイトル1',
-            'body' => '内容1',
+            'title' => 'テストタイトル1',
+            'body' => 'テストタイトル1の内容です。サンプルの文章を表示しています。',
             'user_id' => '2',
             "created_at" => new DateTime(),
             "updated_at" => new DateTime()
             ],
 
             [
-            'title' => 'タイトル2',
-            'body' => '内容2',
+            'title' => 'テスtタイトル2',
+            'body' => 'テストタイトル2の内容です。サンプルの文章を表示しています。',
             'user_id' => '2',
             "created_at" => new DateTime(),
             "updated_at" => new DateTime()
@@ -34,7 +34,7 @@ class ArticlesTableSeeder extends Seeder
 
             [
             'title' => 'タイトル3',
-            'body' => '内容3',
+            'body' => 'テストタイトル3の内容です。サンプルの文章を表示しています。',
             'user_id' => '2',
             "created_at" => new DateTime(),
             "updated_at" => new DateTime()
@@ -42,29 +42,7 @@ class ArticlesTableSeeder extends Seeder
 
 
  // テストユーザー2のデータ
-                        [
-            'title' => 'タイトル1',
-            'body' => '内容1',
-            'user_id' => '3',
-            "created_at" => new DateTime(),
-            "updated_at" => new DateTime()
-            ],
 
-            [
-            'title' => 'タイトル2',
-            'body' => '内容2',
-            'user_id' => '3',
-            "created_at" => new DateTime(),
-            "updated_at" => new DateTime()
-            ],
-
-            [
-            'title' => 'タイトル3',
-            'body' => '内容3',
-            'user_id' => '3',
-            "created_at" => new DateTime(),
-            "updated_at" => new DateTime()
-            ],
 
             // 速水 信二 のデータ
                         [
