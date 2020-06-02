@@ -173,6 +173,9 @@ class ArticlesController extends Controller
         // 削除
         $article->delete();
         // 一覧にリダイレクト
-        return redirect("/users/".$article->user->id )->with('flash_message', '削除が完了しました');
+        return redirect("/users/".$article->user->id )->with('flash_message', '削除が完了しました。');
+        // return redirect("/articles")->with('flash_message', '削除が完了しました');
+          // 一覧にリダイレクト
+//   return redirect('/articles');
     }
 }

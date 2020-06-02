@@ -58,10 +58,10 @@ class UserController extends Controller
     {
         $authUser = Auth::user(); // 認証ユーザー取得
         $user = User::find($user->id);
-        $articles = Article::where('user_id', $user->id); //$userによる投稿を取得
+        // $articles = Article::where('user_id', $user->id); //$userによる投稿を取得
         return view('users.show', [
             'user' => $user,
-            'articles' => $articles,
+            // 'articles' => $articles,
         ]);
     }
 

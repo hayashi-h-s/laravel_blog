@@ -20,8 +20,8 @@ http://laravel-blog-portfolio.herokuapp.com/login
 
 * ユーザー登録機能
 * Authによるユーザー認証機能
-* ブログ記事投稿機能
 * 記事投稿機能(CRUD)
+* ユーザー記事投稿確認(issetメソッド)
 * エラーメッセージ表示
 * フラッシュメッセージ表示
 * validate機能(投稿、ユーザー情報入力)
