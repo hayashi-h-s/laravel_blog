@@ -15,7 +15,7 @@
         <p>{{$article->created_at }}</p>
         <h5 class="mb-3"><a href="{{ url('users/'.$article->user->id) }}">ユーザー名：{{ $article->user->name }}</a></h4>
         <h3 class="mb-3"><a href="/articles/{{$article->id}}">タイトル：{{$article->title}}</a></h3>
-        <h5 class=""><a href="/articles/{{$article->id}}">[記事の詳細を表示]</a></h3>
+        <h2><a href="/articles/{{$article->id}}">内容：[詳細へのリンク]</a></h2>
         @guest
         @else
           @if( ( $article->user_id ) === ( Auth::user()->id ) )
