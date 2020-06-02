@@ -23,7 +23,7 @@ database/seeds/UsersTableSeeder.php
         User::create([
             'id'=> '100',
             'name' => '速水 信二',
-            'email' => 'laravesnsblog@guest.com',
+            'email' => 'laravelsnsblog@guest.com',
             'password' => Hash::make('laravelsnsblog')
         ]);
 
