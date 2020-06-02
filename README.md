@@ -8,7 +8,7 @@ PHP/Laravelの学習をするために、作成いたしました。
 # 本番環境
  
 Herokuにデプロイしています。  
-ログインページより、テストユーザーでワンクリックログインできます。  
+トップページ及びログインページより、テストユーザーでワンクリックログインできます。  
 パスワード :  laravelsnsblog  
 http://laravel-blog-portfolio.herokuapp.com
 
