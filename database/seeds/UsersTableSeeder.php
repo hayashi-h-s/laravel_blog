@@ -29,14 +29,14 @@ database/seeds/UsersTableSeeder.php
 
         User::create([
             'id'=> '2',
-            'name' => 'テストユーザー１',
+            'name' => 'ユーザー１',
             'email' => 'laraveblog1@guest.com',
             'password' => Hash::make('laraveblog1')
         ]);
 
         User::create([
             'id'=> '3',
-            'name' => 'テストユーザー2',
+            'name' => 'ユーザー2',
             'email' => 'laraveblog2@guest.com',
         'password' => Hash::make('laraveblog2')
         ]);

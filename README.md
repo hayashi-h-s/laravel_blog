@@ -2,8 +2,8 @@
 # Laravel_blog
 
 PHP/Laravelで作成した、SNS型のブログサービスです。  
-PHP/Laravelの学習を作成いたしました。  
-ログインしなくても、投稿一覧は観覧可能です。
+PHP/Laravelの学習をするために、作成いたしました。  
+ログインしなくても、投稿一覧は観覧可能です。  
 
 # 本番環境
  
@@ -12,9 +12,9 @@ Herokuにデプロイしています。
 速水信二のパスワード :  laraveblog  
 http://laravel-blog-portfolio.herokuapp.com/login  
 
-*  ログアウト時でも使える機能
-  -  投稿一覧
-  -  投稿詳細
+* ログアウト時でも使える機能
+  -  投稿一覧の表示
+  -  ユーザー詳細の表示
 
 # 実装機能一覧
 

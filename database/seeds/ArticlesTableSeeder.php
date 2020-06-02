@@ -16,7 +16,7 @@ class ArticlesTableSeeder extends Seeder
 
             [
             // テストユーザー1のデータ
-            'title' => 'テストタイトル1',
+            'title' => 'タイトル1',
             'body' => '
                         サンプルの文章を表示しています。
 
@@ -28,7 +28,7 @@ class ArticlesTableSeeder extends Seeder
             ],
 
             [
-            'title' => 'テストタイトル2',
+            'title' => 'タイトル2',
             'body' => '
                         サンプルの文章を表示しています。
 
