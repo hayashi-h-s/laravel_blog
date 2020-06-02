@@ -17,15 +17,23 @@ class ArticlesTableSeeder extends Seeder
             [
             // テストユーザー1のデータ
             'title' => 'テストタイトル1',
-            'body' => 'テストタイトル1の内容です。サンプルの文章を表示しています。',
+            'body' => '
+                        サンプルの文章を表示しています。
+
+                        サンプルの文章を表示しています。サンプルの文章を表示しています。サンプルの文章を表示しています。サンプルの文章を表示しています。
+            ',
             'user_id' => '2',
             "created_at" => new DateTime(),
             "updated_at" => new DateTime()
             ],
 
             [
-            'title' => 'テスtタイトル2',
-            'body' => 'テストタイトル2の内容です。サンプルの文章を表示しています。',
+            'title' => 'テストタイトル2',
+            'body' => '
+                        サンプルの文章を表示しています。
+
+                        サンプルの文章を表示しています。サンプルの文章を表示しています。サンプルの文章を表示しています。サンプルの文章を表示しています。
+            ',
             'user_id' => '2',
             "created_at" => new DateTime(),
             "updated_at" => new DateTime()
@@ -34,7 +42,11 @@ class ArticlesTableSeeder extends Seeder
 
             [
             'title' => 'タイトル3',
-            'body' => 'テストタイトル3の内容です。サンプルの文章を表示しています。',
+            'body' => '
+                        サンプルの文章を表示しています。
+
+                        サンプルの文章を表示しています。サンプルの文章を表示しています。サンプルの文章を表示しています。サンプルの文章を表示しています。
+            ',
             'user_id' => '2',
             "created_at" => new DateTime(),
             "updated_at" => new DateTime()
