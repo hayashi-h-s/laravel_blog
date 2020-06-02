@@ -28,8 +28,8 @@ class LoginController extends Controller
      */
     public function authenticate()
     {
-        $email = 'laraveblog@guest.com';
-        $password = 'laraveblog';
+        $email = 'laravelsnsblog@guest.com';
+        $password = 'laravelsnsblog';
 
         if (Auth::attempt(['email' => $email, 'password' => $password])) {
             // 認証に成功した

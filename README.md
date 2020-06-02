@@ -8,8 +8,8 @@ PHP/Laravelの学習をするために、作成いたしました。
 # 本番環境
  
 Herokuにデプロイしています。  
-ログインページより、テストユーザー(速水 信二)でワンクリックログインできます。  
-速水信二のパスワード :  laraveblog  
+ログインページより、テストユーザーでワンクリックログインできます。  
+パスワード :  laravelsnsblog  
 http://laravel-blog-portfolio.herokuapp.com/login  
 
 * ログアウト時でも使える機能

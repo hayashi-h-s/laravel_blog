@@ -23,22 +23,22 @@ database/seeds/UsersTableSeeder.php
         User::create([
             'id'=> '100',
             'name' => '速水 信二',
-            'email' => 'laraveblog@guest.com',
-            'password' => Hash::make('laraveblog')
+            'email' => 'laravesnsblog@guest.com',
+            'password' => Hash::make('laravelsnsblog')
         ]);
 
         User::create([
             'id'=> '2',
             'name' => 'ユーザー１',
             'email' => 'laraveblog1@guest.com',
-            'password' => Hash::make('laraveblog1')
+            'password' => Hash::make('laravelblog1')
         ]);
 
         User::create([
             'id'=> '3',
             'name' => 'ユーザー2',
             'email' => 'laraveblog2@guest.com',
-        'password' => Hash::make('laraveblog2')
+        'password' => Hash::make('laravelblog2')
         ]);
      }
  }
