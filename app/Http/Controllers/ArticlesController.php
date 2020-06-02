@@ -83,7 +83,7 @@ class ArticlesController extends Controller
             $article->title = $request->title;
             $article->body = $request->body;
             $article->save();
-            return redirect('/articles')->with('flash_message', '投稿が完了しました');
+            return redirect('/articles')->with('flash_message', '投稿が完了しました。');
         }
     }
 
@@ -157,7 +157,7 @@ class ArticlesController extends Controller
             $article->title = $request->title;
             $article->body = $request->body;
             $article->save();
-            return redirect("/articles/".$id)->with('flash_message', '編集が完了しました');
+            return redirect("/articles/".$id)->with('flash_message', '編集が完了しました。');
         }
     }
 

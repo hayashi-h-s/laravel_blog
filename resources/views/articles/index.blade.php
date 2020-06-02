@@ -7,7 +7,7 @@
 {{-- application.blade.phpの@yield('content')に以下のレイアウトを代入 --}}
 @section('content')
   <h1 class="text-center">
-    投稿記事一覧
+    みんなの投稿記事一覧
   </h1>
   @foreach ($articles as $article)
     <div class="card mx-auto text-center container">
