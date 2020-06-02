@@ -16,7 +16,7 @@
     <input type="hidden" name="user_id" value="{{ $authUser->id }}">
     <div>
       <div><label for="title" >タイトル</label></div>
-      <input type="text" name="title"  placeholder="記事のタイトルを入れる" class="w-75" value="{{ old('title')}">
+      <input type="text" name="title"  placeholder="記事のタイトルを入れる" class="w-75" >
     </div>
     <div class="mt-3">
       <div><label for="body">内容</label></div>

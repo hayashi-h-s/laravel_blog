@@ -76,7 +76,7 @@ class ArticlesController extends Controller
         $validator = Validator::make($form, $rules, $message);
 
         if($validator->fails()){
-            return view('articles.create',['article' => $article])
+            return redirect('/articles/create')
                 ->withErrors($validator)
                 ->withInput();
         }else{
