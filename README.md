@@ -18,17 +18,14 @@ http://laravel-blog-portfolio.herokuapp.com/login
 
 # 実装機能一覧
 
-* ユーザー登録機能
-* Authによるユーザー認証機能
+* ユーザー登録機能(Auth)
 * 記事投稿機能(CRUD)
-* ユーザー記事投稿確認(issetメソッド)
-* エラーメッセージ表示
+* validate機能(投稿時)MIDDLEWARE
 * フラッシュメッセージ表示
-* validate機能(投稿、ユーザー情報入力)
 * 日本時間表示に変更
 * ページネーション機能の実装
-* 記事内容のwidthをレスポンシブ対応(スマホ、タブレット)
-* MIDDLEWAREによる制限
+* ログイン、ログアウト時のアクセス制限(MIDDLEWARE)
+* 記事内容の幅をレスポンシブ対応(スマホ、タブレット)
 * デバッグ技術
   -  logger()ヘルパー
   -  val(\Psy\sh());
