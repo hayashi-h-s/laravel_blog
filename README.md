@@ -10,7 +10,7 @@ PHP/Laravelの学習をするために、作成いたしました。
 Herokuにデプロイしています。  
 ログインページより、テストユーザーでワンクリックログインできます。  
 パスワード :  laravelsnsblog  
-http://laravel-blog-portfolio.herokuapp.com/login  
+http://laravel-blog-portfolio.herokuapp.com
 
 * ログアウト時でも使える機能
   -  投稿一覧の表示
