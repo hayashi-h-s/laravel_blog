@@ -38,10 +38,13 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
-                        @guest
+                            <li class="nav-item">
+                                <a class="nav-link" href="/users">全てのユーザー</a>
+                            </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="/articles">投稿一覧</a>
                             </li>
+                        @guest
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('ログイン') }}</a>
                             </li>
@@ -54,9 +57,6 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="/articles/create">新規投稿</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/articles">投稿一覧</a>
-                            </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
@@ -64,7 +64,6 @@
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ url('users/'.Auth::id()) }}">プロフィール</a>
-                                    <a class="dropdown-item" href="/users">全てのユーザー</a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
