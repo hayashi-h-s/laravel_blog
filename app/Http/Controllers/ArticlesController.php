@@ -62,19 +62,21 @@ class ArticlesController extends Controller
         $rules = [
             'user_id' => 'integer|required', // 2項目以上条件がある場合は「 | 」を挟む
             'title' => 'required',
-            'body' => 'required',
+            'body' => 'required'
+
         ];
 
         $message = [
             'user_id.integer' => 'System Error',
             'user_id.required' => 'System Error',
-            'title.required'=> 'タイトルか内容が入力されていません。',
-            'body.required'=> 'タイトルか内容が入力されていません。'
+            'title.required'=> 'タイトルが入力されていません。',
+            'body.required'=> '内容が入力されていません。'
         ];
+
         $validator = Validator::make($form, $rules, $message);
 
         if($validator->fails()){
-            return redirect('/articles/create')
+            return view('articles.create',['article' => $article])
                 ->withErrors($validator)
                 ->withInput();
         }else{
