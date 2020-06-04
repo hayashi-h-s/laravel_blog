@@ -12,6 +12,8 @@
          </div>
       @else
       @endguest
-   <h2 class="btn btn-outline-dark w-25"><a href="https://github.com/hayashi-h-s/laravel_blog">Githubへのリンク</a></h2>
+      <a class="btn btn-outline-dark w-25" href="https://github.com/hayashi-h-s/laravel_sns_blog">
+         Githubへのリンク
+      </a>
 </div>
 @endsection
